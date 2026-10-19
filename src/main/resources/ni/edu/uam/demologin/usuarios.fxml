@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="580" prefWidth="950" spacing="12" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.demologin.controller.UsuariosController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Usuarios registrados" />
+
+    <Button onAction="#eliminarUsuario" text="Eliminar usuario" />
+    <Button onAction="#abrirVentanaEdicion" text="Editar usuario seleccionado" />
+   <Button onAction="#agregarUsuario" text="Agregar usuario" />
+
+    <TableView fx:id="tablaUsuarios" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="230" text="ID" />
+            <TableColumn fx:id="colNombre" prefWidth="130" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="130" text="Apellido" />
+            <TableColumn fx:id="colUsuario" prefWidth="120" text="Usuario" />
+            <TableColumn fx:id="colCorreo" prefWidth="190" text="Correo" />
+            <TableColumn fx:id="colFoto" prefWidth="250" text="Ruta de foto" />
+        </columns>
+    </TableView>
+</VBox>
